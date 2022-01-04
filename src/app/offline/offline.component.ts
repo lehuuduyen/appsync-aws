@@ -7,7 +7,7 @@ import { createTodoInput } from 'src/graphql/inputs';
 import gql from 'graphql-tag';
 
 @Component({
-  selector: 'app-todo',
+  selector: 'app-offline',
   templateUrl: './offline.component.html',
   styleUrls: ['./offline.component.scss']
 })

@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthComponent } from './auth/auth.component';
 import { TodoComponent } from './todo/todo.component';
-import { AmplifyAngularModule, AmplifyService} from 'aws-amplify-angular'
+import {  AmplifyService} from 'aws-amplify-angular'
 /* Add Amplify imports */
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import Amplify from 'aws-amplify';
@@ -16,7 +16,7 @@ Amplify.configure(awsconfig);
 
 @NgModule({
   declarations: [AppComponent,AuthComponent,TodoComponent, AppsyncComponent, OfflineComponent],
-  imports: [AmplifyUIAngularModule /* Add Amplify module */, BrowserModule,AppRoutingModule,AmplifyAngularModule],
+  imports: [AmplifyUIAngularModule /* Add Amplify module */, BrowserModule,AppRoutingModule],
   providers: [AmplifyService],
   bootstrap: [AppComponent], 
 })

@@ -6,7 +6,7 @@ import { OfflineComponent } from './offline/offline.component';
 
 const routes: Routes = [
   {
-    path: "todo",
+    path: "appsync",
     component: TodoComponent
   },
   {
