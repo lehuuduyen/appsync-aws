@@ -11,14 +11,7 @@
               "apiKeyExpirationDays": 7
             }
           },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authmyapp2ffab5f01ffab5f01"
-              }
-            }
-          ]
+          "additionalAuthenticationProviders": []
         }
       }
     }
@@ -30,7 +23,7 @@
       "dependsOn": [
         {
           "category": "auth",
-          "resourceName": "myapp2ffab5f01ffab5f01",
+          "resourceName": "myapp2d50961f7d50961f7",
           "attributes": [
             "UserPoolId",
             "AppClientIDWeb",
@@ -40,7 +33,7 @@
         }
       ]
     },
-    "myapp2ffab5f01ffab5f01": {
+    "myapp2d50961f7d50961f7": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
