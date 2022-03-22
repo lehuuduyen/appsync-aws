@@ -4,6 +4,11 @@
 `rm -rf amplify`
 `npm install -g @aws-amplify/cli`
 
+`amplify configure` 
+###### region:  us-east-1
+######  user name:  lehuuduyen-user
+###### add permission : AdministratorAccess
+###### Profile Name: appsync
 `amplify init`
 
 ###### Enter a name for the project (appsyncaws) => {PROJECT NAME}
@@ -14,9 +19,9 @@
 
 ###### Select from one of the below mentioned services: GraphQL
 
-###### Here is the GraphQL API that we will create. Select a setting to edit or continue Name: myapp2
+###### Here is the GraphQL API that we will create. Select a setting to edit or continue Name: appsyncaws
 
-###### Provide API name: myapp2
+###### Provide API name: appsyncaws
 
 ###### Here is the GraphQL API that we will create. Select a setting to edit or continue Continue
 
@@ -64,9 +69,9 @@
 
 ###### Email based user registration/forgot password: Enabled (Requires per-user email entry at registration)
 
-###### Specify an email verification subject: Your verification code
+###### Specify an email verification subject: {ENTER}
 
-###### Specify an email verification message: Your verification code is {####}
+###### Specify an email verification message: {ENTER}
 
 ###### Do you want to override the default password policy for this User Pool? No
 
@@ -76,14 +81,20 @@
 
 ###### Do you want to specify the user attributes this app can read and write? No
 
-###### Do you want to enable any of the following capabilities? 
+###### Do you want to enable any of the following capabilities? : {ENTER}
 
 ###### Do you want to use an OAuth flow? No
 
 ###### Do you want to configure Lambda Triggers for Cognito? No
 
+`amplify push`
+###### Do you want to generate code for your newly created GraphQL API Yes
+###### Choose the code generation language target : angular
+###### Enter the file name pattern of graphql queries, mutations and subscriptions: {ENTER}
+###### Do you want to generate/update all possible GraphQL operations - queries, mutations and subscriptions: yes
+###### Enter maximum statement depth [increase from default if your schema is deeply nested]: {ENTER}
+###### Enter the file name for the generated code: {ENTER}
 
 ## Development server
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
