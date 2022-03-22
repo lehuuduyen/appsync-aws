@@ -4,7 +4,7 @@
 `rm -rf amplify`
 `npm install -g @aws-amplify/cli`
 
-`amplify configure`
+`amplify configure` 
 ###### region:  us-east-1
 ######  user name:  lehuuduyen-user
 ###### add permission : AdministratorAccess
