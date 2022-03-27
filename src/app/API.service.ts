@@ -114,7 +114,7 @@ export type ModelIDInput = {
 
 export type ModelTodoConnection = {
   __typename: "ModelTodoConnection";
-  items: Array<Todo>;
+  items: Array<Todo | null>;
   nextToken?: string | null;
 };
 
@@ -163,7 +163,7 @@ export type ListTodosQuery = {
     description?: string | null;
     createdAt: string;
     updatedAt: string;
-  }>;
+  } | null>;
   nextToken?: string | null;
 };
 

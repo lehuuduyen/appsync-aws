@@ -16,5 +16,23 @@
         "myapp2d50961f7d50961f7": {}
       }
     }
+  },
+  "appsync": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-myapp2-appsync-164249-authRole",
+      "UnauthRoleArn": "arn:aws:iam::122863833209:role/amplify-myapp2-appsync-164249-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::122863833209:role/amplify-myapp2-appsync-164249-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-myapp2-appsync-164249-deployment",
+      "UnauthRoleName": "amplify-myapp2-appsync-164249-unauthRole",
+      "StackName": "amplify-myapp2-appsync-164249",
+      "StackId": "arn:aws:cloudformation:us-east-1:122863833209:stack/amplify-myapp2-appsync-164249/74235700-a9c4-11ec-840b-1249cef8ae51",
+      "AmplifyAppId": "d2rf3dum6oguqn"
+    },
+    "categories": {
+      "auth": {
+        "myapp21d58a9b21d58a9b2": {}
+      }
+    }
   }
 }
