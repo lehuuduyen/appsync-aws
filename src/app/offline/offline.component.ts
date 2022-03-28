@@ -5,6 +5,9 @@ import { listTodos } from '../../graphql/queries';
 import { buildMutation } from 'aws-appsync';
 import { createTodoInput } from 'src/graphql/inputs';
 import gql from 'graphql-tag';
+import { Observable, fromEvent, merge, of } from 'rxjs';
+import { mapTo } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-offline',
@@ -12,10 +15,16 @@ import gql from 'graphql-tag';
   styleUrls: ['./offline.component.scss']
 })
 export class OfflineComponent implements OnInit {
+
+  online$: Observable<boolean>;
   allTodos:any = [];
-  constructor(private appsync:AppsyncService) { }
+  constructor(private appsync:AppsyncService) { this.online$ = merge(
+    of(navigator.onLine),
+    fromEvent(window, 'online').pipe(mapTo(true)),
+    fromEvent(window, 'offline').pipe(mapTo(false))
+  );}
+
   async ngOnInit() {
-    
    this.appsync.hc().then(client => {
      const observable = client.watchQuery({
        query: gql(listTodos),
@@ -25,6 +34,7 @@ export class OfflineComponent implements OnInit {
        this.allTodos = data.listTodos.items;
      })
    })
+   
   } 
 
   async createTodo(todoName: any){
@@ -46,7 +56,6 @@ export class OfflineComponent implements OnInit {
       ));
       this.allTodos.push(result.data.createTodo);
       todoName.value = null
-      console.log(this.allTodos)
 
     }
       
