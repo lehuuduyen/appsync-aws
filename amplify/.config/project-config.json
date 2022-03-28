@@ -1,12 +1,12 @@
 {
-  "projectName": "myapp2",
+  "projectName": "myapp3",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
     "framework": "angular",
     "config": {
       "SourceDir": "src",
-      "DistributionDir": "dist/myapp2",
+      "DistributionDir": "dist/myapp3",
       "BuildCommand": "npm run-script build",
       "StartCommand": "ng serve"
     }

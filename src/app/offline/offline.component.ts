@@ -15,6 +15,7 @@ export class OfflineComponent implements OnInit {
   allTodos:any = [];
   constructor(private appsync:AppsyncService) { }
   async ngOnInit() {
+    
    this.appsync.hc().then(client => {
      const observable = client.watchQuery({
        query: gql(listTodos),
@@ -45,6 +46,8 @@ export class OfflineComponent implements OnInit {
       ));
       this.allTodos.push(result.data.createTodo);
       todoName.value = null
+      console.log(this.allTodos)
+
     }
       
   }

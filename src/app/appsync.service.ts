@@ -8,14 +8,16 @@ import { Auth } from 'aws-amplify';
 export class AppsyncService {
   _hc;
   constructor(){
+    
     const client = new AWSAppSyncClient({
       url: aws_exports.aws_appsync_graphqlEndpoint,
       region: aws_exports.aws_project_region,
       auth: {
         type: AUTH_TYPE.AMAZON_COGNITO_USER_POOLS,
-        jwtToken: async () => (await Auth.currentSession()).getIdToken().getJwtToken()
+        jwtToken: async () => (await Auth.currentSession()).getIdToken().getJwtToken() 
       }
     })
+    
     this._hc = client;
   }
 

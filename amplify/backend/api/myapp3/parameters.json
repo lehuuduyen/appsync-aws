@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "myapp3",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authmyapp3e8a19481e8a19481",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

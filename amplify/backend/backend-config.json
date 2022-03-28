@@ -1,6 +1,6 @@
 {
   "api": {
-    "myapp2": {
+    "myapp3": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "output": {
@@ -11,7 +11,14 @@
               "apiKeyExpirationDays": 7
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authmyapp3e8a19481e8a19481"
+              }
+            }
+          ]
         }
       }
     }
@@ -23,7 +30,7 @@
       "dependsOn": [
         {
           "category": "auth",
-          "resourceName": "myapp2d50961f7d50961f7",
+          "resourceName": "myapp3e8a19481e8a19481",
           "attributes": [
             "UserPoolId",
             "AppClientIDWeb",
@@ -33,7 +40,7 @@
         }
       ]
     },
-    "myapp2d50961f7d50961f7": {
+    "myapp3e8a19481e8a19481": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
